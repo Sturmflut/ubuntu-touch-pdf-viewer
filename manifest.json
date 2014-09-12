@@ -1,0 +1,15 @@
+{
+    "architecture": "all",
+    "description": "description of ubuntu-touch-pdf-viewer",
+    "framework": "ubuntu-sdk-14.10-dev2",
+    "hooks": {
+        "pdfviewer": {
+            "apparmor": "pdfviewer.apparmor",
+            "desktop": "pdfviewer.desktop"
+        }
+    },
+    "maintainer": "Sturm Flut <sturmflut@lieberbiber.de>",
+    "name": "com.ubuntu.developer.sturmflut.ubuntu-touch-pdf-viewer",
+    "title": "ubuntu-touch-pdf-viewer",
+    "version": "0.1"
+}
