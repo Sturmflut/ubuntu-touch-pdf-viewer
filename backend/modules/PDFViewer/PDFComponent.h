@@ -35,8 +35,8 @@ private:
     QString m_documentPath;
     qint32 m_pageNumber;
 
-    Poppler::Document* m_document = NULL;
-    Poppler::Page* m_pageBuffer = NULL;
+    Poppler::Document* m_document;
+    Poppler::Page* m_pageBuffer;
 };
 
 #endif // MYTYPE_H

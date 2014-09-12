@@ -1,6 +1,6 @@
 {
     "architecture": "all",
-    "description": "description of ubuntu-touch-pdf-viewer",
+    "description": "A simple, fast PDF viewer based on Poppler",
     "framework": "ubuntu-sdk-14.10-dev2",
     "hooks": {
         "pdfviewer": {
@@ -10,6 +10,6 @@
     },
     "maintainer": "Sturm Flut <sturmflut@lieberbiber.de>",
     "name": "com.ubuntu.developer.sturmflut.ubuntu-touch-pdf-viewer",
-    "title": "ubuntu-touch-pdf-viewer",
-    "version": "0.1"
+    "title": "PDF Viewer",
+    "version": "0.3"
 }

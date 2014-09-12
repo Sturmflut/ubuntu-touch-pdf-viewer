@@ -1,5 +1,7 @@
 import QtQuick 2.0
 import Ubuntu.Components 1.1
+import Ubuntu.Content 0.1
+
 import PDFViewer 1.0
 
 /*!
@@ -28,12 +30,46 @@ MainView {
     width: units.gu(100)
     height: units.gu(75)
 
+    property var activeTransfer
+
+    ContentPeer {
+        id: pdfSourceSingle
+        contentType: ContentType.Documents
+        handler: ContentHandler.Source
+        selectionType: ContentTransfer.Single
+    }
+    ContentTransferHint {
+        id: transferHint
+        anchors.fill: parent
+        activeTransfer: root.activeTransfer
+    }
+    Connections {
+        target: backButton.activeTransfer
+
+        onStateChanged: {
+            console.log(activeTransfer.items)
+        }
+    }
+
+
+
     Column{
         anchors.fill: parent
         Row {
             id: buttonRow
             anchors.left: parent.left
             anchors.right: parent.right
+
+            Button {
+                id: openButton
+
+                text: i18n.tr("Open")
+
+                onClicked: {
+                    activeTransfer = pdfSourceSingle.request()
+                }
+
+            }
 
             Button {
                 id: backButton
@@ -49,7 +85,7 @@ MainView {
 
             Label {
                 id: pageNumberLabel
-                width: buttonRow.width - forwardButton.width - backButton.width
+                width: buttonRow.width - openButton.width - forwardButton.width - backButton.width
                 text: "1"
             }
 
@@ -73,8 +109,6 @@ MainView {
 
             Component.onCompleted:
             {
-                documentPath = "/tmp/example.pdf"
-
                 pageNumberLabel.text = pdfComponent.pageNumber + " / " + pdfComponent.numberOfPages
             }
         }

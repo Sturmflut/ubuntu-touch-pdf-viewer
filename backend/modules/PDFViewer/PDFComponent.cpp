@@ -13,7 +13,8 @@ PDFComponent::PDFComponent(QQuickItem *parent) :
     m_documentPath(""),
     m_pageNumber(0)
 {
-
+    m_document = NULL;
+    m_pageBuffer = NULL;
 }
 
 QString PDFComponent::documentPath() const
@@ -77,7 +78,7 @@ void PDFComponent::previousPage()
 
 qint32 PDFComponent::numberOfPages() const
 {
-    if(m_document || m_document->isLocked())
+    if(m_document)
     {
         return m_document->numPages();
     }
