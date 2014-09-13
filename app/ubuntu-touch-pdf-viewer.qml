@@ -42,12 +42,13 @@ MainView {
         id: transferHint
         anchors.fill: parent
         activeTransfer: root.activeTransfer
+        z: 100
     }
     Connections {
-        target: backButton.activeTransfer
+        target: root.activeTransfer
 
         onStateChanged: {
-            console.log(activeTransfer.items)
+            console.log(root.activeTransfer.items)
         }
     }
 
@@ -66,9 +67,8 @@ MainView {
                 text: i18n.tr("Open")
 
                 onClicked: {
-                    activeTransfer = pdfSourceSingle.request()
+                    root.activeTransfer = pdfSourceSingle.request()
                 }
-
             }
 
             Button {
