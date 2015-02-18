@@ -1,6 +1,6 @@
 [Desktop Entry]
-Name=PDF Viewer
-Comment=A simple, fast PDF viewer based on Poppler
+_Name=ubuntu-touch-pdf-viewer
+Comment=My project description
 Exec=@EXEC@
 Icon=@ICON@
 Terminal=false

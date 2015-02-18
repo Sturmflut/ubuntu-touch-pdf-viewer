@@ -38,12 +38,14 @@ MainView {
         handler: ContentHandler.Source
         selectionType: ContentTransfer.Single
     }
+
     ContentTransferHint {
         id: transferHint
         anchors.fill: parent
         activeTransfer: root.activeTransfer
         z: 100
     }
+
     Connections {
         target: root.activeTransfer
 

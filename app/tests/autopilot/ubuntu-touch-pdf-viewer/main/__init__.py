@@ -1,2 +1,2 @@
-""" A main.qml test suite """
+""" A Main.qml test suite """
 
