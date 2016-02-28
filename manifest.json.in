@@ -6,7 +6,8 @@
     "hooks": {
         "pdfviewer": {
             "apparmor": "pdfviewer.apparmor",
-            "desktop": "pdfviewer.desktop"
+            "desktop": "pdfviewer.desktop",
+            "content-hub": "pdfviewer-contenthub.json"
         }
     },
     "version": "0.1",

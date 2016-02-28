@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-18 11:35+0100\n"
+"POT-Creation-Date: 2015-02-18 14:11+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,10 +17,10 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../app/ubuntu-touch-pdf-viewer.qml:69
+#: ../app/ubuntu-touch-pdf-viewer.qml:84
 msgid "Open"
 msgstr ""
 
-#: /home/mr2515/Sync/workdir/ubuntu-touch/build-ubuntu-touch-pdf-viewer.old-Desktop-Default/po/pdfviewer.desktop.in.h:1
+#: /home/mr2515/Sync/workdir/ubuntu-touch/build-ubuntu-touch-pdf-viewer-Desktop-Default/po/pdfviewer.desktop.in.h:1
 msgid "ubuntu-touch-pdf-viewer"
 msgstr ""

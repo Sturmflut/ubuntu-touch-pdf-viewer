@@ -12,11 +12,12 @@ import Pdfviewer 1.0
 
 MainView {
     id: root
+
     // objectName for functional testing purposes (autopilot-qt5)
     objectName: "mainView"
 
     // Note! applicationName needs to match the "name" field of the click manifest
-    applicationName: "com.ubuntu.developer.sturmflut.ubuntu-touch-pdf-viewer"
+    applicationName: "ubuntu-touch-pdf-viewer.sturmflut"
 
     /*
      This property enables the application to change orientation
@@ -30,7 +31,7 @@ MainView {
     width: units.gu(100)
     height: units.gu(75)
 
-    property var activeTransfer
+    property var activeTransfer: null
 
     ContentPeer {
         id: pdfSourceSingle
@@ -47,10 +48,24 @@ MainView {
     }
 
     Connections {
+        target: ContentHub
+
+        onImportRequested: {
+            console.log("onImportRequested")
+            console.log(root.activeTransfer.items[0].url)
+            //var filePath = String(transfer.items[0].url).replace('file://', '')
+            //qrCodeReader.processImage(filePath);
+        }
+    }
+
+    Connections {
         target: root.activeTransfer
 
         onStateChanged: {
-            console.log(root.activeTransfer.items)
+            if(root.activeTransfer.state === ContentTransfer.Charged)
+            {
+                console.log("activeTransfer.onStateChanged: " + activeTransfer.items[0].url)
+            }
         }
     }
 

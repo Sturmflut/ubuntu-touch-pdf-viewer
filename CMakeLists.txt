@@ -49,8 +49,8 @@ configure_file(manifest.json.in ${CMAKE_CURRENT_BINARY_DIR}/manifest.json)
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/manifest.json
         DESTINATION ${CMAKE_INSTALL_PREFIX})
 
-install(DIRECTORY "app/graphics" DESTINATION ${DATA_DIR})
 install(FILES "pdfviewer.apparmor" DESTINATION ${DATA_DIR})
+install(FILES "pdfviewer-contenthub.json" DESTINATION ${DATA_DIR})
 
 add_subdirectory(app)
 add_subdirectory(backend)
